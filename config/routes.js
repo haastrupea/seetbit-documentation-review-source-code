@@ -20,7 +20,14 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  'POST /register': 'user/signup',
 
+  'POST /wallet': 'wallet/create',
+  'GET /wallet/:userId': 'wallet/fetch',
+
+  'POST /checkout': 'payment/standard-checkout',
+  
+  'POST /charge-card': 'payment/paywith-card-token',
 
   /***************************************************************************
   *                                                                          *
